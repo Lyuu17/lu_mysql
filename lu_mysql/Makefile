@@ -8,7 +8,7 @@ all: lu_mysql.so
 default: all
 
 lu_mysql.so: $(Module_objs)
-	$(CC) -o $@ $(Module_objs) -shared -s -L/usr/lib/mysql -lmysqlclient
+	$(CC) -o ../bin/$@ $(Module_objs) -shared -s -L/usr/lib/mysql -lmysqlclient
 
 SQMain.o: SQMain.c SQMain.h SQFuncs.h
 	$(CC) $(CFLAGS) -c SQMain.c -o $@
